@@ -43,6 +43,19 @@ public class LL {
         System.out.println("null");
     }
 
+    public void printlist(){
+
+        if (head == null){
+            System.out.println("List is empty");
+            return;
+        }
+        Node currNode=head;
+        while(currNode!=null){
+            System.out.print(currNode.data + "->");
+            currNode=currNode.next;
+        }
+        System.out.println("null");
+    }
     public static void main(String[] args) {
         LL list=new LL();
         list.addFirst("A");
