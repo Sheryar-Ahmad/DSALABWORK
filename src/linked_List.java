@@ -39,6 +39,7 @@ class Practice {
     public void printList(){
         if(head == null){
             System.out.println("List is empty");
+            return;
         }
 
         Node currNode = head;
