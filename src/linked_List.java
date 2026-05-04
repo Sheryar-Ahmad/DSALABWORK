@@ -37,6 +37,14 @@ class Practice{
            currNode.next=newNode;
         }
     }
+    public void printList(){
+        Node currNode=head;
+        while (currNode != null){
+            System.out.println(currNode.data + "->");
+            currNode=currNode.next;
+        }
+        System.out.println("Null");
+    }
 
 }
 public class linked_List {
