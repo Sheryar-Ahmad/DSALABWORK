@@ -1,23 +1,23 @@
 public class LL {
-    private Node head;
+   private Node head;
 
-    class Node {
-        String data;
-        Node next;
+ class Node{
+     String data;
+     Node next;
 
-        Node(String data) {
-            this.data = data;
-            this.next = null;
-        }
-    }
-    public void addFirst(String data) {
-        Node newNode = new Node(data);
-        if (head == null) {
-            head = newNode;
-            return;
-        }
-        newNode.next = head;
-        head = newNode;
+     Node(String data){
+         this.data=data;
+         this.next=null;} }
+
+    public void addFirst(String data){
+
+     Node newNode=new Node(data);
+     if (head == null){
+         head=newNode;
+         return;
+     }
+     newNode.next=head;
+     head=newNode;
     }
 
     public void addLast(String data){
@@ -26,21 +26,11 @@ public class LL {
             head=newNode;
             return;
         }
-
         Node currNode=head;
-        while (currNode.next!=null){
+        while(currNode.next!=null){
             currNode=currNode.next;
         }
         currNode.next=newNode;
-    }
-
-    public void printList(){
-        Node currNode=head;
-        while (currNode != null){
-            System.out.print(currNode.data +"->");
-            currNode=currNode.next;
-        }
-        System.out.println("null");
     }
 
     public void printlist(){
@@ -57,10 +47,12 @@ public class LL {
         System.out.println("null");
     }
     public static void main(String[] args) {
-        LL list=new LL();
-        list.addFirst("A");
-        list.addFirst("B");
-        list.addLast("A+");
-        list.printList();
+    LL newlist=new LL();
+
+    newlist.addFirst("1");
+    newlist.addLast("2");
+    newlist.addFirst("A");
+
+    newlist.printlist();
     }
 }
