@@ -56,5 +56,7 @@ public class linked_List {
         ll.printList();
         ll.insertAtStart(1);
         ll.printList();
+        ll.insertAtStart(0);
+        ll.printList();
     }
 }
