@@ -1,62 +1,63 @@
-class Practice{
+class Practice {
     Node head;
     static class Node{
-        int data;
+        String data;
         Node next;
-        Node(int data){
-            this.data=data;
+
+        Node(String value){
+            data=value;
             this.next=null;
         }
     }
 
-    // inserting elements in the first
-    public void insertAtStart(int data){
-        Node newNode= new Node(data);
+    public void printAtStart(String value){
+        Node newNode = new Node(value);
         if (head == null){
-            head=newNode;
-            return;
+            head = newNode; // head points to the newNode as there is no Node present in the start
+            return ;
         }
-            newNode.next=head;
-            head=newNode;
-
+        newNode.next=head; // here head means the old node so the newNode.next 'pointer' points to the old node that is present before
+        head = newNode;// here is the newNode again made the head
     }
 
-    //inserting the elements in the list in the end
-    public void insertAtEnd(int data){
-        Node newNode= new Node(data);
+    public void printAtEnd(String value){
+        Node newNode = new Node(value);
         if (head == null){
-            head=newNode;
+            head = newNode; // head points to the newNode
             return;
         }
-           Node currNode=head;
-           while (currNode.next != null){
-               currNode=currNode.next;
-           }
-           currNode.next=newNode;
 
+        Node currNode=head;
+        while (currNode.next != null){
+            currNode=currNode.next;
+        }
+
+        currNode.next=newNode; // here when it got the last node and check its pointer is null then it would make
+        // that pointer to point to the newNode that is being created
     }
 
     public void printList(){
-        Node currNode=head;
-        while (currNode != null){
+        if(head == null){
+            System.out.println("List is empty");
+        }
+
+        Node currNode = head;
+        while (currNode != null ){
             System.out.print(currNode.data + "->");
             currNode=currNode.next;
         }
         System.out.println("Null");
     }
-
 }
 public class linked_List {
     public static void main(String[] args) {
 
-        Practice ll = new Practice();
-        ll.insertAtStart(2);
-        ll.printList();
-        ll.insertAtEnd(3);
-        ll.printList();
-        ll.insertAtStart(1);
-        ll.printList();
-        ll.insertAtStart(0);
-        ll.printList();
+         Practice ll = new Practice();
+         ll.printAtEnd("C");
+         ll.printList();
+         ll.printAtStart("B");
+         ll.printList();
+         ll.printAtStart("A");
+         ll.printList();
     }
 }
