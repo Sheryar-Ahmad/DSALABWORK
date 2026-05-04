@@ -10,6 +10,7 @@ class Practice {
         }
     }
 
+    //Insert At First
     public void printAtStart(String value){
         Node newNode = new Node(value);
         if (head == null){
@@ -20,6 +21,7 @@ class Practice {
         head = newNode;// here is the newNode again made the head
     }
 
+    //Insert At Last
     public void printAtEnd(String value){
         Node newNode = new Node(value);
         if (head == null){
@@ -36,6 +38,19 @@ class Practice {
         // that pointer to point to the newNode that is being created
     }
 
+    //Delete At First of the List
+    public void deleteFirst(){
+        if (head == null){
+            System.out.println("List is empty ");
+            return;
+        }
+
+        System.out.println("Deleted: "+ head.data);
+        head = head.next;
+    }
+
+
+    // Prints the List
     public void printList(){
         if(head == null){
             System.out.println("List is empty");
@@ -49,6 +64,29 @@ class Practice {
         }
         System.out.println("Null");
     }
+
+    public void deleteLast(){
+        if (head == null){
+            System.out.println("List is empty");
+            return;
+        }
+
+        if (head.next == null){
+            head =null;
+            return;
+        }
+
+        Node secondLast=head;
+        Node lastNode=head.next;
+
+        while (lastNode != null){
+            lastNode=lastNode.next;
+            secondLast=secondLast.next;
+        }
+
+        secondLast.next=null;
+
+    }
 }
 public class linked_List {
     public static void main(String[] args) {
@@ -59,6 +97,12 @@ public class linked_List {
          ll.printAtStart("B");
          ll.printList();
          ll.printAtStart("A");
+         ll.printList();
+
+         ll.deleteFirst();
+         ll.printList();
+
+         ll.deleteLast();
          ll.printList();
     }
 }
