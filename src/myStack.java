@@ -65,6 +65,7 @@ public class myStack {
         stack.push(3);
         stack.push(4);
         stack.push(5);
+
         stack.printstack();
     }
 }
