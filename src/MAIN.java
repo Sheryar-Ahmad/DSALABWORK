@@ -2,6 +2,7 @@ import java.util.Arrays;
 
 
 class Student{
+    //student class
     String studentName;
     String registrationNumber;
     float cgpa;
