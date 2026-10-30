@@ -33,7 +33,7 @@ public class MAIN {
         students[1] =new Student("Ali","FA24-BSE-001",2.31f);
         students[2] =new Student("Ahmad","FA24-BSE-003",1.41f);
         students[3] =new Student("Khan","FA24-BSE-004",3.61f);
-        students[4] =new Student("Muhammad","FA24-BSE-005",4.0f);
+        students[4] =new Student("Muhammad Hammad","FA24-BSE-005",4.0f);
 
 
         float greater=students[0].maximum(students);
