@@ -9,7 +9,7 @@ public class ContainsDuplicate {
         for (int num : nums) {
             // HashSet.add() returns false if the element already exists
             if (!seen.add(num)) {
-                return true; // Duplicate found
+                return true; // Duplicate found.
             }
         }
 
