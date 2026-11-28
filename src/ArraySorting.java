@@ -16,8 +16,11 @@ public class ArraySorting {
             if (!swapped) break;
         }
     }
-  
 
+  //Seclection sort
+     selectionSort(b);
+        System.out.print("Selection sort: ");
+        printArray(b);
 
     static void printArray(int[] arr) {
         for (int value : arr) System.out.print(value + " ");
@@ -32,6 +35,10 @@ public class ArraySorting {
         bubbleSort(a);
         System.out.print("Bubble sort:    ");
         printArray(a);
+
+       selectionSort(b);
+        System.out.print("Selection sort: ");
+        printArray(b);
 
     }
 }
