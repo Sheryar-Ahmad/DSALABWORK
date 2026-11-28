@@ -27,6 +27,20 @@ public class ArraySorting {
         System.out.println();
     }
 
+   //Insertion Sort
+    static void insertionSort(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            int key = arr[i];
+            int j = i - 1;
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            arr[j + 1] = key;
+        }
+    }
+   
+
     public static void main(String[] args) {
         int[] a = {64, 25, 12, 22, 11};
         int[] b = a.clone();
@@ -39,6 +53,10 @@ public class ArraySorting {
        selectionSort(b);
         System.out.print("Selection sort: ");
         printArray(b);
+
+       insertionSort(c);
+        System.out.print("Insertion sort: ");
+        printArray(c);
 
     }
 }
